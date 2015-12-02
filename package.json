@@ -24,25 +24,22 @@
   "license": "ISC",
   "dependencies": {
     "babel": "latest",
+    "babel-polyfill": "latest",
+    "babel-preset-es2015": "latest",
+    "babelify": "latest",
+    "browserify": "latest",
     "es6-shim": "latest",
     "express": "latest",
     "express-handlebars": "latest",
-    "object-assign": "latest"
+    "less": "latest",
+    "less-plugin-autoprefix": "latest",
+    "object-assign": "latest",
+    "watch": "latest",
+    "watchify": "latest"
   },
   "babel": {
     "presets": [
       "es2015"
     ]
-  },
-  "devDependencies": {
-    "babel-core": "latest",
-    "babel-polyfill": "latest",
-    "babel-preset-es2015": "latest",
-    "babelify": "latest",
-    "browserify": "latest",
-    "less": "latest",
-    "less-plugin-autoprefix": "latest",
-    "watch": "latest",
-    "watchify": "latest"
   }
 }

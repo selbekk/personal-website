@@ -1,0 +1,27 @@
+.action-list {
+    list-style: none;
+    text-align: center;
+    margin: 1.5em 0;
+}
+
+.action-list-item {
+    display: inline-block;
+    margin-right: 1em;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.action-list-item-link {
+    color: white;
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform .1s ease-out;
+
+    &:focus,
+    &:hover {
+        transform: scale(1.1);
+    }
+}

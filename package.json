@@ -1,17 +1,22 @@
 {
-  "name": "your-appname-here",
+  "name": "selbekk-personal-website",
   "version": "0.0.1",
   "description": "",
   "scripts": {
     "start": "node app.js",
-    "build": "npm run build:css && npm run build:js",
+    "build": "npm run build:css && npm run build:js && npm run build:fonts && npm run build:img && npm run build:docs",
     "build:css": "lessc src/frontend/less/main.less --autoprefix=\"last 2 versions\" dist/styles.css",
+    "build:docs": "rsync -a src/frontend/docs dist",
+    "build:fonts": "rsync -a src/frontend/fonts dist",
+    "build:img": "rsync -a src/frontend/images dist",
     "build:js": "browserify src/frontend/js/main.js -t babelify -o dist/scripts.js",
-    "watch": "npm run watch:css & npm run watch:js",
+    "prewatch": "npm run build",
+    "watch": "npm run watch:css & npm run watch:js & npm run watch:img",
     "watch:css": "watch 'npm run build:css' src/frontend/less",
+    "watch:img": "watch 'npm run build:img' src/frontend/images",
     "watch:js": "watchify -v -t babelify src/frontend/js/main.js -o dist/scripts.js"
   },
-  "author": "",
+  "author": "Kristofer Selbekk <selbeezy@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "babel": "latest",
@@ -27,6 +32,7 @@
   },
   "devDependencies": {
     "babel-core": "latest",
+    "babel-polyfill": "^6.2.0",
     "babel-preset-es2015": "latest",
     "babelify": "latest",
     "browserify": "latest",

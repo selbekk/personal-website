@@ -1,0 +1,36 @@
+.full-page {
+    position: relative;
+}
+
+.full-page-image,
+.full-page-fade,
+.full-page-content {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.full-page-image {
+    background: transparent no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.full-page-fade {
+    background-image: radial-gradient(
+        rgba(0,0,0,0.6),
+        transparent
+    );
+    z-index: 2;
+}
+
+.full-page-content {
+    z-index: 3;
+    color: white;
+}
+
+.full-page-content.mod-centered {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

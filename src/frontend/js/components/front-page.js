@@ -10,7 +10,13 @@ function _getRandom(arr) {
 }
 
 function _changeImage($el) {
-    $el.style.backgroundImage = 'url('+ BASE_URL + _getRandom(backgroundImages) +')';
+    const img = new Image();
+    const src = BASE_URL + _getRandom(backgroundImages);
+    img.addEventListener('load', () => {
+        $el.style.backgroundImage = 'url('+ src +')';
+        $el.classList.add('is-loaded');
+    });
+    img.src = src;
 }
 
 function init() {

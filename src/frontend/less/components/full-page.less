@@ -13,7 +13,13 @@
 .full-page-image {
     background: transparent no-repeat center center;
     background-size: cover;
+    opacity: 0;
+    transition: opacity .5s ease-out;
     z-index: 1;
+
+    &.is-loaded {
+        opacity: 1;
+    }
 }
 
 .full-page-fade {

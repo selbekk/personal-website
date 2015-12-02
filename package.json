@@ -20,6 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "babel": "latest",
+    "babel-core": "^6.2.1",
     "es6-shim": "latest",
     "express": "latest",
     "express-handlebars": "latest",

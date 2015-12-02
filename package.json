@@ -2,7 +2,11 @@
   "name": "selbekk-personal-website",
   "version": "0.0.1",
   "description": "",
+  "engine": {
+      "node": "5.0.0"
+  },
   "scripts": {
+    "prestart": "npm run build",
     "start": "node app.js",
     "build": "npm run build:css && npm run build:js && npm run build:fonts && npm run build:img && npm run build:docs",
     "build:css": "lessc src/frontend/less/main.less --autoprefix=\"last 2 versions\" dist/styles.css",
@@ -20,7 +24,6 @@
   "license": "ISC",
   "dependencies": {
     "babel": "latest",
-    "babel-core": "^6.2.1",
     "es6-shim": "latest",
     "express": "latest",
     "express-handlebars": "latest",
@@ -33,7 +36,7 @@
   },
   "devDependencies": {
     "babel-core": "latest",
-    "babel-polyfill": "^6.2.0",
+    "babel-polyfill": "latest",
     "babel-preset-es2015": "latest",
     "babelify": "latest",
     "browserify": "latest",

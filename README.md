@@ -1,5 +1,3 @@
-# An opinionated webapp boilerplate
+# My personal website
 
-This is how I start most of my Express-based projects.
-
-Use as is, or fork to create your own spin on it!
+Not much to see here. It's not live yet - but will be soon!

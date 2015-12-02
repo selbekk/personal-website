@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "engine": {
-      "node": "5.0.0"
+    "node": "5.0.0"
   },
   "scripts": {
     "prestart": "npm run build",
@@ -28,6 +28,7 @@
     "babel-preset-es2015": "latest",
     "babelify": "latest",
     "browserify": "latest",
+    "compression": "^1.6.0",
     "es6-shim": "latest",
     "express": "latest",
     "express-handlebars": "latest",

@@ -1,6 +1,7 @@
-let express = require('express');
-let exphbs = require('express-handlebars');
-let app = express();
+const express = require('express');
+const exphbs = require('express-handlebars');
+const compression = require('compression');
+const app = express();
 
 app.engine('handlebars', exphbs({
     defaultLayout: 'main',
@@ -12,6 +13,7 @@ app.set('views', __dirname + '/views');
 app.set('port', process.env.PORT || 4000);
 
 // Middleware
+app.use(compression());
 app.use('/assets', express.static('dist'));
 
 // Routes

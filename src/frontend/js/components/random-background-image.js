@@ -1,3 +1,5 @@
+const imageLoader = require('./image-loader');
+
 const BASE_URL = '/assets/images/';
 const backgroundImages = [
     'background-01.jpg',
@@ -10,13 +12,8 @@ function _getRandom(arr) {
 }
 
 function _changeImage($el) {
-    const img = new Image();
-    const src = BASE_URL + _getRandom(backgroundImages);
-    img.addEventListener('load', () => {
-        $el.style.backgroundImage = 'url('+ src +')';
-        $el.classList.add('is-loaded');
-    });
-    img.src = src;
+    const srcToLoad = BASE_URL + _getRandom(backgroundImages);
+    imageLoader.loadImage($el, srcToLoad);
 }
 
 function init() {

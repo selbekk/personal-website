@@ -1,8 +1,12 @@
 // Add ES2015-polyfills
 require("babel-polyfill");
 
-const frontPage = require('./components/front-page');
+const randomBackgroundImage = require('./components/random-background-image');
+const randomUnsplashImage = require('./components/random-unsplash-image');
+const smoothScroll = require('smooth-scroll');
 
 document.addEventListener('DOMContentLoaded', () => {
-    frontPage.init();
+    randomBackgroundImage.init();
+    randomUnsplashImage.init();
+    smoothScroll.init();
 });

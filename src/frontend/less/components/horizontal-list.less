@@ -1,0 +1,17 @@
+.horizontal-list {
+    list-style: none;
+
+    .clearfix();
+}
+
+.horizontal-list-item {
+    display: block;
+    float: left;
+}
+
+.horizontal-list.mod-thirds > .horizontal-list-item {
+    box-sizing: border-box;
+    @media @tablet {
+        width: 33%;
+    }
+}

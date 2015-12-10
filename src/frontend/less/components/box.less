@@ -1,0 +1,27 @@
+.box {
+    background-color: @color-primary;
+    color: @color-white;
+    display: block;
+    margin: 1em;
+    padding: 1em;
+    text-decoration: none;
+    transition: all .1s ease-out;
+
+    &:focus,
+    &:hover {
+        background-color: @color-primary-darker;
+    }
+
+    &:active {
+        transform: scale(1.03);
+    }
+}
+
+.box-heading {
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.box-description {
+    text-align: left;
+}

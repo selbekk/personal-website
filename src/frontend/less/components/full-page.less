@@ -1,5 +1,7 @@
 .full-page {
+    height: 100vh;
     position: relative;
+    width: 100vw;
 }
 
 .full-page-image,
@@ -30,6 +32,13 @@
     z-index: 2;
 }
 
+.full-page-fade.mod-linear {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.6),
+        transparent
+    );
+}
+
 .full-page-content {
     z-index: 3;
     color: white;
@@ -39,4 +48,44 @@
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+.full-page-next {
+    border: 3px solid @color-white;
+    border-radius: 50%;
+    bottom: 1em;
+    cursor: pointer;
+    display: block;
+    height: 3em;
+    left: 50%;
+    margin-left: -1.5em;
+    position: absolute;
+    transition: transform .1s ease-out;
+    width: 3em;
+    z-index: 4;
+
+    &:before,
+    &:after {
+        background-color: @color-white;
+        content: '';
+        display: block;
+        height: 3px;
+        position: absolute;
+        top: 1.4em;
+        width: 50%;
+    }
+
+    &:before {
+        left: 1.05em;
+        transform: rotate(-45deg);
+    }
+    &:after {
+        transform: rotate(45deg);
+        right: 1.05em;
+    }
+
+    &:focus,
+    &:hover {
+        transform: translateY(.1em);
+    }
 }

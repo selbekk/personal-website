@@ -20,6 +20,9 @@ app.use('/assets', express.static('dist'));
 app.get('/', (req, res) => res.render('index') );
 
 // Error handling
+app.use((req, res, next) => {
+  res.status(404).render('404');
+});
 
 // Start server
 app.listen(app.get('port'),

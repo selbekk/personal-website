@@ -1,0 +1,15 @@
+<section class="container">
+    <article class="blog-post">
+        {{#if title}}
+            <h1 class="blog-post-title">{{title}}</h1>
+        {{/if}}
+
+        {{#if published}}
+            <div class="blog-post-published">{{published.[0]}}, {{published.[1]}}</div>
+        {{/if}}
+        {{{ content }}}
+        <div class="comments">
+            {{> disqus}}
+        </div>
+    </article>
+</section>

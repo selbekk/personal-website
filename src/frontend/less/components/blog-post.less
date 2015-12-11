@@ -1,15 +1,6 @@
-.blog-post-title {
-    border-bottom: 3px solid @color-grey-dark;
-    font-size: 400%;
-    padding-bottom: .5em;
-    margin-bottom: .5em;
+.blog-title {
+    font-size: 500%;
     text-align: center;
-    text-transform: uppercase;
-}
-
-.blog-post-published {
-    text-align: center;
-    margin-bottom: 1.5em;
 }
 
 .blog-post {
@@ -41,6 +32,24 @@
         font-size: 130%;
     }
 
+    h1.blog-post-title { // A single blog post
+        border-bottom: 3px solid @color-grey-dark;
+        font-size: 400%;
+        padding-bottom: .5em;
+        margin-bottom: .5em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    h2.blog-post-title { // Blog list
+        font-weight: bold;
+    }
+
+    .blog-post-published {
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+
     ol,
     ul {
         padding-left: 1.5em;
@@ -70,6 +79,16 @@
         &:hover {
             background-color: @color-grey-lighter;
             border-color: @color-grey-lighter;
+        }
+    }
+
+    .blog-post-title-link {
+        color: @color-grey-darkest;
+        border-bottom: none;
+
+        &:focus,
+        &:hover {
+            background-color: none;
         }
     }
 }

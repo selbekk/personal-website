@@ -1,0 +1,13 @@
+<section class="blog">
+    <h1 class="blog-title">selbekk.io blog</h1>
+{{#each blogPosts}}
+    <article class="blog-post">
+        <div class="container">
+            {{#if title}}
+                <h2 class="blog-post-title"><a href="{{url}}" class="blog-post-title-link">{{title}}</a></h2>
+            {{/if}}
+            {{{ content }}}
+        </div>
+    </article>
+{{/each}}
+</section>

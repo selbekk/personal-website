@@ -1,5 +1,6 @@
 <!---
 title: Create your own boilerplate
+published: December 10th, 2015
 -->
 I've always had a hard time using boilerplate code - and especially generators.
 More often than not, what seems like a simple one-command-does-it-all script
@@ -33,9 +34,8 @@ done it tons of times already. Remember all those websites you created? All
 those apps you begun, but never finished? I bet most of those have your
 preferred file structure already set up.
 
-I do a lot of projects based on [node](nodejs.org), [expressjs](expressjs.com),
-[handlebars](handlebarsjs.com) and [less](lesscss.org). Therefore, I created my
-own little boilerplate template for those kinds of projects:
+I do a lot of projects based on [node](nodejs.org), [express](expressjs.com),
+[handlebars](handlebarsjs.com) and [less](lesscss.org). Therefore, I created my own little boilerplate template for those kinds of projects:
 
 [Check out my boilerplate!](https://github.com/selbekk/express-app-boilerplate)
 
@@ -56,3 +56,5 @@ git commit -am "Initial commit from boilerplate"
 That's it - now I'm ready to code my project. I don't have to delete stuff I
 don't need. I don't have to add stuff I __do__ need. I can just start creating
 new stuff.
+
+Have you created your own boilerplate? Let me know in the comments.

@@ -15,23 +15,26 @@
 .blog-post {
     font-size: 110%;
 
+    * + * {
+        margin-bottom: 1.5em;
+    }
+
+    h1, h2, h3 {
+        margin-bottom: .5em;
+        font-weight: lighter;
+        text-transform: uppercase;
+    }
+
     h1 {
         font-size: 230%;
-        margin-bottom: .5em;
     }
 
     h2 {
         font-size: 180%;
-        margin-bottom: .5em;
     }
 
     h3 {
         font-size: 130%;
-        margin-bottom: .5em;
-    }
-
-    * + * {
-        margin-bottom: 1.5em;
     }
 
     ol,
@@ -44,10 +47,25 @@
     }
 
     blockquote {
-        border-left: .5em solid @color-grey-light;
+        border-left: .3em solid @color-grey-light;
         color: @color-grey-dark;
         font-style: italic;
         font-size: 1.2em;
         padding-left: 1em;
+    }
+
+    a {
+        border-bottom: 1px solid @color-primary;
+        color: @color-primary;
+        display: inline-block;
+        padding: 0 .1em;
+        text-decoration: none;
+        transition: all .1s ease-out;
+
+        &:focus,
+        &:hover {
+            background-color: @color-grey-lighter;
+            border-color: @color-grey-lighter;
+        }
     }
 }

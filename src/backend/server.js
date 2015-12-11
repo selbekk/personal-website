@@ -24,6 +24,8 @@ app.get('/', (req, res) => res.render('index') );
 app.get('/:blogId', (req, res, next) =>
     processFiles(__dirname + '/../content/' + req.params.blogId + '.md')
         .then(files => res.render('blog-post', {
+                slug: req.params.blogId,
+                url: 'http://www.selbekk.io/' + req.params.blogId,
                 title: files[0].title,
                 tags: files[0].tags,
                 published: files[0].published,

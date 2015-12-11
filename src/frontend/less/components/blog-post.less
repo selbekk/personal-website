@@ -34,11 +34,15 @@
 
     h1.blog-post-title { // A single blog post
         border-bottom: 3px solid @color-grey-dark;
-        font-size: 400%;
+        font-size: 200%;
         padding-bottom: .5em;
         margin-bottom: .5em;
         text-align: center;
         text-transform: uppercase;
+
+        @media @tablet {
+            font-size: 400%;
+        }
     }
 
     h2.blog-post-title { // Blog list

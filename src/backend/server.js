@@ -24,8 +24,9 @@ app.get('/', (req, res) => res.render('index') );
 app.get('/blog', (req, res) => {
     processFiles(__dirname + '/../content/*.md')
         .then(files => res.render('blog', {
-            blogPosts: files.sort((a, b) => new Date(a.published) < new Date(b.published)).map(file => { return {
-                    url: 'http://www.selbekk.io/' + req.params.blogId,
+            blogPosts: files.sort((a, b) => new Date(a.published) < new Date(b.published))
+                .map(file => { return {
+                    url: 'http://www.selbekk.io/blog/' + file.file.substring(file.file.lastIndexOf('/') + 1, file.file.length - 3),
                     title: file.title,
                     published: file.published,
                     content: marked(file.data)
